@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+
+state=$(eww windows | grep mus)
+
+if [ "$state" == "*mus" ]; then
+    eww close mus
+else
+    eww open mus 
+fi
